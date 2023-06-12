@@ -1,16 +1,18 @@
-# monte carlo markov chain experiment
-
 import sys
 import random
 
-# if first arg isnt a number, quit
-if type(int(sys.argv[1])) != int:
-    print("first arg should be int")
+def help():
+    print("Usage: mcmc.py <size> <text file(s) ...>")
+    print("Size should be int, determines how big word groups are")
     exit()
 
+# if first arg isnt a number, help and quit
+if type(int(sys.argv[1])) != int:
+    help()
+
+# if too few args, help and quit
 if len(sys.argv) < 3:
-    print("need > 1 arg")
-    exit()
+    help()
 
 # Declare variables
 # size = 1st argument = solo, pair, tri, etc. group
@@ -65,4 +67,4 @@ while True:
     new_list.reverse()
     word_list = new_list
 
-print ('output banter: \n', out)
+print ('output: \n', out)
