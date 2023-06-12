@@ -1,12 +1,9 @@
-# https://en.wikipedia.org/wiki/Python_(programming_language)
-# https://www.mediawiki.org/wiki/API:Main_page
+# Adapted from https://gist.github.com/scionoftech/0f35d5e231be2cf46823d774023268b6 to work with this project!
 
 # 1. Get a plain text representation of either the entire page or the page "extract" straight from the API with the extracts prop
-
 # Note that this approach only works on MediaWiki sites with the TextExtracts extension. This notably includes Wikipedia, but not some smaller Mediawiki sites like, say, http://www.wikia.com/
 
 # You want to hit a URL like
-
 # https://en.wikipedia.org/w/api.php?action=query&format=json&titles=Bla_Bla_Bla&prop=extracts&exintro&explaintext
 
 # Breaking that down, we've got the following parameters in there (documented at https://www.mediawiki.org/wiki/Extension:TextExtracts#query+extracts):
